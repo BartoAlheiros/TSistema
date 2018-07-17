@@ -1,0 +1,74 @@
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+
+.btn-primary {
+  background-color: #127a38;
+  border-color: #127a38;
+}
+
+.btn-primary:active {
+  background: #0A4520;
+}
+
+.container {
+ position: relative;
+}
+
+#user {
+ position: absolute;
+ top: 60%;
+ right: 56%;
+ transform: translate(59%, 60%);
+}
+
+#password {
+ position: absolute;
+ top: 70%;
+ right: 50%;
+ transform: translate(35%, 60%);
+}
+
+#combo {
+ position: absolute;
+ top: 80%;
+ right: 45%;
+ transform: translate(7%, 70%);
+ font-size: 20px;
+ border-bottom: 20px; 
+}
+
+#loginBttn {
+ position: absolute;
+ top: 70%;
+ right: 50%;
+ transform: translate(65%, 400%);
+}
+
+#legenda {
+  position: absolute;
+  font-size: 15px;
+  width: 250px;
+  transform: translate(-45%, 610%);
+}
+
+#quemSomos {
+ position: absolute;
+ top: 70%;
+ right: 50%;
+ transform: translate(-5%, 1000%);
+}
