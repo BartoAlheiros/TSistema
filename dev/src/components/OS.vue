@@ -1,9 +1,13 @@
 <template>
 	<b-container align="left">
-  <div class="col-sm-auto" style="width: 600px">
-  	<br>
+  <!--<div class="col-sm-auto" style="width: 600px">
+  	<br>-->
+    <br>
+    <b-row>
+    <b-col cols="8">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show" validated="true">
-      <div class="col-sm-auto" style="width: 600px">
+      <!--<div class="col-sm-auto" style="width: 600px">-->
+       
       	<b-form-group id="exampleInputGroup1"
       							horizontal
                     label="Número:"
@@ -34,7 +38,7 @@
                       required
                       placeholder="Enter name"
                       class="col-sm-auto"
-                      style="width: 40%"
+                      style="width: 45%"
                       :type="'date'"
                       readonly>
         </b-form-input>
@@ -69,7 +73,7 @@
         <b-form-select id="exampleInput5"
                       :options="foods"
                       required
-                      style="width: 40%"
+                      style="width: 45%"
                       v-model="form.food">
         </b-form-select>
       </b-form-group>
@@ -110,7 +114,7 @@
         </b-form-input>
       </b-form-group>
 
-     <div style="width: 80%">
+     <div style="width: 70%">
      	<div>Equipamentos: </div>
     	<b-form-select v-model="selected" :options="options" class="mb-3" :select-size="4">
     	</b-form-select>
@@ -119,12 +123,14 @@
     <button-group>
       <b-button type="submit" variant="primary">Salvar</b-button>
       <b-button type="reset" variant="danger">Limpar</b-button>
-    </button-group>  
+    </button-group>
+    
     </b-form>
-  </div>
-  <b-col style="width: 600px">
-    <h2>Teste</h2>
-  </b-col>  
+  </b-col>
+    <b-col style="width: 600px">
+      <h3>Equipamento</h3>
+    </b-col> 
+  </b-row>
 </b-container>
 </template>
 
