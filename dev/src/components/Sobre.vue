@@ -1,29 +1,21 @@
 <template>
-  <div class="test">
-    <h1>{{ msg }}</h1>
-    <b-alert show>Alerta Padrão</b-alert>
-
-    <b-alert variant="danger"
-             dismissible
-             :show="showDismissibleAlert"
-             @dismissed="showDismissibleAlert=false">
-      Erro! Mensagem de erro...
-    </b-alert>
-    
-    <b-btn @click="showDismissibleAlert=true" variant="info" class="m-1">
-      Apresentar Erro! ({{showDismissibleAlert?'visível':'oculta'}})
-    </b-btn>
-  
+  <div class="about">
+    <h1>{{ msg }}</h1> <br>
+    <p id="text">{{ p1 }}</p>
+    <p id="text">{{ p2 }}</p>
+    <p id="text">{{ p3 }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'test',
+  name: 'about',
   data () {
     return {
-      msg: 'Quem somos.',
-      showDismissibleAlert: false
+      msg: 'Quem somos',
+      p1: 'O TSistema é uma iniciativa ambiciosa de alunos da UFRPE de entrar no mercado de softwares de HelpDesk.',
+      p2: 'O sistema é inteiramente focado na experiência tanto dos usuários, quanto dos técnicos em informática e/ou eletrônica, podendo ser extendido a outros públicos futuramente.',
+      p3: 'Para mais informações, mande um e-mail para: alheirosb@gmail.com .'
     }
   }
 }
@@ -47,5 +39,9 @@ li {
 
 a {
   color: #42b983;
+}
+
+#text {
+  text-align: justify;
 }
 </style>

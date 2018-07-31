@@ -128,7 +128,59 @@
     </b-form>
   </b-col>
     <b-col style="width: 600px">
-      <h3>Equipamento</h3>
+      <b-form v-if="show" validated="true">
+      <h4>Equipamento</h4>
+      <b-form-group id="exampleInputGroup8"
+                    horizontal
+                    label="Cód:"
+                    label-for="exampleInput8"
+                    label-cols="2"
+                    label-class="text-sm-left">
+          <b-form-input 
+                      id="exampleInput8"
+                      type="email"
+                      v-model="form.email"
+                      required
+                      placeholder="0000000" 
+                      class="col-sm-auto"
+                      style="width: 50%">
+          </b-form-input>
+        </b-form-group>
+
+        <b-form-group id="exampleInputGroup9"
+                    horizontal
+                    label="Data entrada:"
+                    label-for="exampleInput9"
+                    label-cols="5"
+                    label-class="text-sm-left">
+          <b-form-input 
+                      id="exampleInput9"
+                      type="date"
+                      v-model="form.email"
+                      required
+                      placeholder="0000000" 
+                      class="col-sm-auto"
+                      style="width: 105%">
+          </b-form-input>
+        </b-form-group>
+
+        <b-form-group id="exampleInputGroup10"
+                    horizontal
+                    label="Setor:"
+                    label-for="exampleInput10"
+                    label-cols="5"
+                    label-class="text-sm-left">
+          <b-form-input 
+                      id="exampleInput10"
+                      type="text"
+                      v-model="form.email"
+                      required
+                      placeholder="0000000" 
+                      class="col-sm-auto"
+                      style="width: 105%">
+          </b-form-input>
+        </b-form-group>
+    </b-form>
     </b-col> 
   </b-row>
 </b-container>

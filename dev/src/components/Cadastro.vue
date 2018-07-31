@@ -1,20 +1,35 @@
 <template>
-  <div class="test">
-    <h1>{{ msg }}</h1>
-    <b-alert show>Alerta Padrão</b-alert>
-
-    <b-alert variant="danger"
-             dismissible
-             :show="showDismissibleAlert"
-             @dismissed="showDismissibleAlert=false">
-      Erro! Mensagem de erro...
-    </b-alert>
-    
-    <b-btn @click="showDismissibleAlert=true" variant="info" class="m-1">
-      Apresentar Erro! ({{showDismissibleAlert?'visível':'oculta'}})
-    </b-btn>
-  
-  </div>
+ <div>
+    <b-card-group deck>
+        <b-card header=" "
+                header-tag="header"
+                footer=" "
+                footer-tag="footer"
+                title="Técnico"
+                class="mb-2"
+                style="max-width: 20rem;">
+            <br>    
+            <p class="card-text">Faça seu cadastro como técnico e desfrute
+            de todas as funcionalidades do nosso sistema agora mesmo!</p>
+            <br>
+            <b-button href="#"
+                      variant="primary"
+                      id="button">Cadastrar</b-button>
+        </b-card>
+        <b-card title="Cliente"
+                header=" "
+                header-tag="header"
+                footer=" "
+                footer-tag="footer"
+                class="mb-2"
+                style="max-width: 20rem;">
+            <p class="card-text">Fez um chamado e quer saber se já estamos a caminho? Tem alguma ordem de serviço para conferir? Nota fiscal? Interagir com os técnicos? Faça seu cadastro de Cliente!</p>    
+            <b-button href="#"
+                      variant="primary"
+                      id="button">Vamos lá!</b-button>
+        </b-card>
+    </b-card-group>
+</div>
 </template>
 
 <script>
@@ -47,5 +62,14 @@ li {
 
 a {
   color: #42b983;
+}
+
+#button {
+  color: white;
+  background-color: #127a38;
+  border-color: #127a38;
+  -webkit-box-shadow: 6px 6px 10px #999; 
+     -moz-box-shadow: 6px 6px 10px #999;
+          box-shadow: 6px 6px 10px #999;  
 }
 </style>

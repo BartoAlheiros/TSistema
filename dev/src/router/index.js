@@ -7,6 +7,8 @@ import PainelAdmin from '@/components/PainelAdmin'
 import PainelAdminContent from '@/components/PainelAdminContent'
 import ChamadosAtend from '@/components/ChamadosAtend'
 import OS from '@/components/OS'
+import CadastroTecnico from '@/components/CadastroTecnico'
+import CadastroCliente from '@/components/CadastroCliente'
 
 Vue.use(Router)
 Vue.use(Sobre)
@@ -16,6 +18,8 @@ Vue.use(PainelAdmin)
 Vue.use(PainelAdminContent)
 Vue.use(ChamadosAtend)
 Vue.use(OS)
+Vue.use(CadastroTecnico)
+Vue.use(CadastroCliente)
 
 export default new Router({
   routes: [
@@ -32,7 +36,8 @@ export default new Router({
     {
       path: '/cadastro',
       name: 'Cadastro',
-      component: Cadastro
+      component: Cadastro,
+      children: [{}]
     },
     {
       path: '/painelAdmin',
