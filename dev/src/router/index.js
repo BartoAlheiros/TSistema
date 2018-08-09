@@ -36,8 +36,7 @@ export default new Router({
     {
       path: '/cadastro',
       name: 'Cadastro',
-      component: Cadastro,
-      children: [{}]
+      component: Cadastro
     },
     {
       path: '/painelAdmin',

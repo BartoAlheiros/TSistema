@@ -132,7 +132,7 @@
       <h4>Equipamento</h4>
       <b-form-group id="exampleInputGroup8"
                     horizontal
-                    label="Cód:"
+                    label="Cod:"
                     label-for="exampleInput8"
                     label-cols="2"
                     label-class="text-sm-left">
@@ -180,6 +180,31 @@
                       style="width: 105%">
           </b-form-input>
         </b-form-group>
+
+        <b-form-group 
+                      label="Histórico:"
+                      label-for="textarea1"
+                          >
+          <b-form-textarea 
+                      id="textarea1"
+                      v-model="text"
+                      :rows="3"
+                      :max-rows="6">
+          </b-form-textarea>
+        </b-form-group>
+
+        <b-form-group label="Iniciado:">
+          <b-form-radio-group id="btnradios1"
+          buttons
+          v-model="selectedRadio"
+          :options="options2"
+          name="radiosBtnDefault" />
+        </b-form-group>
+
+        <button-group>
+          <b-button type="submit" variant="primary">Ver detalhado</b-button>
+        </button-group>
+
     </b-form>
     </b-col> 
   </b-row>
@@ -190,9 +215,11 @@
 export default {
   data () {
     return {
+      text: '',
       form: {
         email: '',
         name: '',
+        estado: '',
         food: null,
         checked: []
       },
@@ -207,6 +234,11 @@ export default {
         { value: 'a', text: 'Notebook Dell 7787' },
         { value: 'b', text: 'Impressora HP 30703' },
         { value: 'c', text: 'PC desktop Itautec 3031' }
+      ],
+      selectedRadio: 's',
+      options2: [
+        { text: 'Sim', value: 's' },
+        { text: 'Não', value: 'n' }
       ]
     }
   },

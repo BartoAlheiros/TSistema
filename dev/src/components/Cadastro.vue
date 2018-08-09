@@ -1,11 +1,12 @@
 <template>
  <div>
-    <b-card-group deck>
+  <br>
+    <b-card-group deck id="cards">
         <b-card header=" "
                 header-tag="header"
                 footer=" "
                 footer-tag="footer"
-                title="Técnico"
+                title="Empresa"
                 class="mb-2"
                 style="max-width: 20rem;">
             <br>    
@@ -71,5 +72,9 @@ a {
   -webkit-box-shadow: 6px 6px 10px #999; 
      -moz-box-shadow: 6px 6px 10px #999;
           box-shadow: 6px 6px 10px #999;  
+}
+
+#cards {
+  padding-left: 20px;
 }
 </style>
